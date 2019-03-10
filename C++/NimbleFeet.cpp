@@ -226,11 +226,10 @@ void printSummary(Player players[],int size)
 	{
 		cout << left <<setw(7) << i+1 << setw(20) << players[i].name << setw(15) << players[i].color << setw(8) << players[i].score << endl;
 	}
-	//Chua lam duoc min max, gap bugs
-	/* max , maxIndex;
-	int min , minIndex;
-	max = players[0].score, min = players[0].score;
-	for (int i=0; i < size; i++)
+	
+	int maxIndex = 0, minIndex = 0; 
+	int max = players[0].score, min = players[0].score;
+	for (int i = 1; i < size; i++)
 	{
 		if (players[i].score > max){
 			max = players[i].score;
@@ -243,7 +242,7 @@ void printSummary(Player players[],int size)
 			
 	}
 	cout << players[maxIndex].name << " has the highest score " << max << " points."<<endl;
-	cout << players[minIndex].name << " has the lowest score " << min << " points."<<endl;*/
+	cout << players[minIndex].name << " has the lowest score " << min << " points."<<endl;
 	cout << "---------------------------------------------------\n";
 }
 
