@@ -193,10 +193,14 @@ void gamePlay(int menu[][col], int row, Player &player){
 		cout << player.name << endl;
 		do
 		{	
-			do {
+			if (row_pos < 5){
+				do {
 				cout << "Enter the column position for round " << (row_pos+1) << " (0 1 2): ";
 				cin >> col_pos;
 			}while(col_pos != 0 && col_pos != 1 && col_pos != 2);
+			}else
+				break;
+			
 			
 			if (menu[row_pos][col_pos] == player.color && row_pos < 5)
 			{
